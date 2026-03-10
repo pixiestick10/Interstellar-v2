@@ -18,7 +18,7 @@ try {
 }
 
 const form = document.getElementById("fv");
-const input = document.getElementById("iv");
+const input = document.getElementById("input");
 
 if (form && input) {
   form.addEventListener("submit", async event => {
@@ -34,7 +34,7 @@ if (form && input) {
 function processUrl(value, path) {
   let url = value.trim();
   const engine = localStorage.getItem("engine");
-  const searchUrl = engine ? engine : "https://www.google.com/search?q=";
+  const searchUrl = engine ? engine : "https://duckduckgo.com/?q=";
 
   if (!isUrl(url)) {
     url = searchUrl + url;
